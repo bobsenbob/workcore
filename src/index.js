@@ -1,12 +1,36 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+import {ThemeProvider, createTheme} from '@mui/material/styles';
 import App from './App';
+import { BrowserRouter as Router } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
+import { green } from '@mui/material/colors';
 
+  const themeOne=createTheme({
+    palette: {
+      
+      primary: {
+        main: green[500],
+        light: green[500],
+        
+      },
+      secondary: {
+        main: '#ffffff'
+      }
+    }
+  });
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={themeOne}>
+      <Router>
+        <App />
+      </Router>
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

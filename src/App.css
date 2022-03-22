@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  min-height: 100vh;
 }
 
 .App-logo {
@@ -14,20 +15,50 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+  position: relative;
+
+  background-color: #4caf50;
+  min-height: 10vh;
+  max-height: 40vh;
+  width: 100vw;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  overflow:hidden
 }
 
 .App-link {
   color: #61dafb;
 }
 
+.websiteTitle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: 2%;
+  margin-bottom: 0;
+  padding: 0%;
+}
+ 
+.navBar {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  white-space: nowrap;
+  height: 45px;
+  min-width: fit-content;
+}
+
+.navBarLink {
+  display: inline-block;
+  padding: 0.2em;
+  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+a:link {text-decoration: none;}
+a:hover {color: lightblue;}
+a:visited {text-decoration: none;}
+a:active {text-decoration: none;}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
